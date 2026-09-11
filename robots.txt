@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://perfume-recommend-app.enjoy-onepage.com/sitemap.xml
