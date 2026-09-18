@@ -115,6 +115,15 @@
     
     </style>
 <meta content="summary_large_image" name="twitter:card"/><meta content="내 취향 맞춤형 니치 향수 노트 추천기" name="twitter:title"/><meta content="나를 가장 잘 표현하는 향기는? 무드 &amp; 노트 맞춤형 니치 향수 실시간 큐레이션!" name="twitter:description"/><meta content="https://perfume-recommend-app.enjoy-onepage.com/og-image.png" name="twitter:image"/><style id="mobile-hardening-shield">
+  /* 모바일 한글 단어 단위 줄바꿈 보존 & 버튼 텍스트 단일행 쉴드 */
+  body, h1, h2, h3, h4, p, span, label {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  button, [role="button"], a.btn {
+    white-space: nowrap;
+    word-break: keep-all;
+  }
   @media (max-width: 640px) {
     input, select, textarea {
       font-size: 16px !important;
