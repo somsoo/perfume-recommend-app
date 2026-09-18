@@ -552,7 +552,6 @@
 
       if (resBadge) resBadge.textContent = profile.badge;
       const matchScore = Math.round(92 + (mood.length % 7));
-      const scoreBadge = document.getElementById('matchScoreBadge');
       if (scoreBadge) scoreBadge.textContent = `적합도: ${matchScore}%`;
       if (resName) resName.textContent = profile.name;
       if (resDesc) resDesc.textContent = profile.desc;
