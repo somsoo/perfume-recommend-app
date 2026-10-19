@@ -61,7 +61,7 @@
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>내 취향 맞춤형 니치 향수 노트 추천기 | 나만의</title>
+<title>니치 향수 추천 | 내 취향 맞춤형 시그니처 향 찾기</title>
 <meta content="시트러스, 우디, 플로럴, 오리엔탈 등 내 분위기에 딱 맞는 니치 향수와 탑/미들/베이스 노트를 100% 실시간 맞춤 분석해 드립니다." name="description"/>
 <meta content="니치 향수 추천, 향수 노트 찾기, 우디 향수, 시트러스 향수, 나만의 향수, 향수 추천 테스트, 퍼퓸 노트" name="keywords"/>
 <meta content="index, follow" name="robots"/>
@@ -580,6 +580,7 @@
 
       if (resBadge) resBadge.textContent = profile.badge;
       const matchScore = Math.round(92 + (mood.length % 7));
+      const scoreBadge = document.getElementById('scoreBadge');
       if (scoreBadge) scoreBadge.textContent = `적합도: ${matchScore}%`;
       if (resName) resName.textContent = profile.name;
       if (resDesc) resDesc.textContent = profile.desc;
@@ -705,7 +706,7 @@
       let textToCopy = customText;
       if (!textToCopy) {
         const resEl = document.querySelector('#resultBox, .result-card, #result, [id*="result"], [class*="result"], [id*="res"]');
-        textToCopy = resEl ? resEl.innerText.trim() : document.title;
+        textToCopy = resEl ? resEl.textContent.trim() : document.title;
       }
       const fullText = textToCopy + "\n\n👉 바로가기: " + window.location.href;
       if (navigator.clipboard && navigator.clipboard.writeText) {
